@@ -4,7 +4,7 @@ const contactController = require("../controllers/contactController");
 const auth = require("../middleware/auth");
 
 router.get("/", auth, contactController.getAllContacts);
-router.post("/", contactController.createContact);
+router.post("/create", contactController.createContact);
 router.put("/:id", auth, contactController.updateContact);
 router.delete("/:id", auth, contactController.deleteContact);
 router.get("/exportCSV", auth, contactController.exportContactsCSV);
